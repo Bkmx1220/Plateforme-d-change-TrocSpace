@@ -1,0 +1,112 @@
+/* Style de base du body */
+body {
+    /* background-color: #bfbfbf; */
+    margin: 0;
+    padding-top: 4em;
+}
+
+/* Classe pour l'arrière-plan de la page */
+.body-background {
+    position: absolute;  /* Positionner la div en fond */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; /* Assurer que la div occupe au moins la hauteur de la fenêtre */
+    background-image: url('@/assets/images/form_background.jpg');
+    background-size: cover;  /* Couvrir tout l'espace */
+    background-position: center; /* Centrer l'image */
+    z-index: -1; /* Mettre la div derrière le contenu */
+}
+
+/* Style des boutons sociaux */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style des boutons sociaux */
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Style du bouton Google */
+.social-button.google {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol des boutons */
+.social-button.google:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Style des messages d'erreur */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* --- Mode Nuit --- */
+
+/* Règles de base pour le mode nuit */
+body.night-mode {
+    background-color: #121212; /* Fond sombre pour le mode nuit */
+    color: white; /* Texte clair en mode nuit */
+}
+
+/* Modifications spécifiques pour les éléments du mode nuit */
+body.night-mode .body-background {
+    filter: brightness(0.4); /* Assombrir l'image de fond */
+}
+
+/* Ajuster les couleurs des boutons pour le mode nuit */
+body.night-mode .social-button {
+    background-color: #333;
+    border-color: #444;
+    color: white;
+}
+
+/* Effet de survol des boutons en mode nuit */
+body.night-mode .social-button:hover {
+    background-color: #444;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton Google en mode nuit */
+body.night-mode .social-button.google {
+    background-color: #555;
+    color: white;
+}
+
+/* Effet de survol du bouton Google en mode nuit */
+body.night-mode .social-button.google:hover {
+    background-color: #666;
+}
